@@ -1,0 +1,52 @@
+#props {
+  display: none;
+}
+body {
+  margin: 0;
+}
+.image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+}
+.title {
+  margin-top: 10%;
+  border-bottom: 1px solid rgba(255,255,255,0.8);
+  padding: 20px;
+}
+.copyright {
+  padding: 20px;
+}
+h1, h4, p {
+  text-align: center;
+  color: rgba(255,255,255,0.8);
+}
+h4 {
+  font-size: 12px;
+}
+.boxes {
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.8);
+}
+.box {
+  height: 100px;
+  padding: 10px;
+}
+.box .outline {
+  height: 80px;
+  padding: 5px;
+  background-color: rgba(255,255,255,0.8);
+}
+.preview {
+  height: 70px;
+  background-size: auto 70px;
+  background-repeat: no-repeat;
+}
+.preview:hover {
+  cursor: pointer;
+}
