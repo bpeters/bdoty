@@ -27945,7 +27945,11 @@ var Home = React.createClass({displayName: 'Home',
     };
   },
   handleHover: function(i) {
-    console.log(this.props.images[i]);
+    this.setState({
+      image: this.props.images[i]
+    });
+  },
+  handleClick: function(i) {
     this.setState({
       image: this.props.images[i]
     });
@@ -27962,7 +27966,7 @@ var Home = React.createClass({displayName: 'Home',
       return (
         React.DOM.div({key: i, className: "box col-md-3 col-xs-3"}, 
           React.DOM.div({className: "outline"}, 
-            React.DOM.div({style: url, className: "preview", onMouseOver: self.handleHover.bind(null, i)})
+            React.DOM.div({style: url, className: "preview", onMouseOver: self.handleHover.bind(null, i), onClick: self.handleClick.bind(null, i)})
           )
         )
       );

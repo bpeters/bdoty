@@ -11,7 +11,11 @@ var Home = React.createClass({
     };
   },
   handleHover: function(i) {
-    console.log(this.props.images[i]);
+    this.setState({
+      image: this.props.images[i]
+    });
+  },
+  handleClick: function(i) {
     this.setState({
       image: this.props.images[i]
     });
@@ -28,7 +32,7 @@ var Home = React.createClass({
       return (
         <div key={i} className="box col-md-3 col-xs-3">
           <div className="outline">
-            <div style={url} className="preview" onMouseOver={self.handleHover.bind(null, i)}></div>
+            <div style={url} className="preview" onMouseOver={self.handleHover.bind(null, i)} onClick={self.handleClick.bind(null, i)}></div>
           </div>
         </div>
       );
