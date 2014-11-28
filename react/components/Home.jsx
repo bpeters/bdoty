@@ -21,6 +21,7 @@ var Home = React.createClass({
     });
   },
   render: function() {
+    React.initializeTouchEvents(true);
     var self = this;
     var style = {
       backgroundImage: 'url(' + this.state.image + ')'
@@ -32,7 +33,7 @@ var Home = React.createClass({
       return (
         <div key={i} className="box col-md-3 col-xs-3">
           <div className="outline">
-            <div style={url} className="preview" onMouseOver={self.handleHover.bind(null, i)} onClick={self.handleClick.bind(null, i)}></div>
+            <div style={url} className="preview" onMouseOver={self.handleHover.bind(null, i)} onClick={self.handleClick.bind(null, i)} onTouchStart={self.handleClick.bind(null, i)}></div>
           </div>
         </div>
       );
