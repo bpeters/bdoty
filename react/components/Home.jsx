@@ -26,7 +26,7 @@ var Home = React.createClass({
         backgroundImage: 'url(' + preview + ')'
       };
       return (
-        <div key={i} className="box col-md-3">
+        <div key={i} className="box col-md-3 col-xs-3">
           <div className="outline">
             <div style={url} className="preview" onMouseOver={self.handleHover.bind(null, i)}></div>
           </div>

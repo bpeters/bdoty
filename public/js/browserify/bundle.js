@@ -27960,7 +27960,7 @@ var Home = React.createClass({displayName: 'Home',
         backgroundImage: 'url(' + preview + ')'
       };
       return (
-        React.DOM.div({key: i, className: "box col-md-3"}, 
+        React.DOM.div({key: i, className: "box col-md-3 col-xs-3"}, 
           React.DOM.div({className: "outline"}, 
             React.DOM.div({style: url, className: "preview", onMouseOver: self.handleHover.bind(null, i)})
           )
