@@ -1,5 +1,9 @@
 var Parse = require('parse').Parse;
-Parse.initialize("5jLRFbxQU5blBCtaO9W9WGrPOHH7za610VNSEBvO", "xEdBFn8QWzP1Qu0s6KcMuvSSToAp258dxV27WxGR");
+var config = require('config');
+var parseKey = config.get('Parse.key');
+var parseSecret = config.get('Parse.secret');
+
+Parse.initialize(parseKey, parseSecret);
 
 var Portfolio = Parse.Object.extend("Portfolio");
 
